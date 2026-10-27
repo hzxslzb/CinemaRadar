@@ -1,5 +1,7 @@
 # 从源码构建 CinemaRadar
 
+本页是快速构建指南；工具链设计、脚本行为、CI 故障与发布流程详见 [Doc/ 构建、CI 与发布](../Doc/12-Build-CI-and-Releases.md)。
+
 当前发布版本为 `1.0.3+4`，发布范围为 Android 和 macOS。源码中的 HarmonyOS 目录保留，未在本版本重新构建验证。
 
 ## Flutter SDK 与依赖

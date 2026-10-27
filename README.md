@@ -12,7 +12,7 @@
 [![CI](https://github.com/hzxslzb/CinemaRadar/actions/workflows/ci.yml/badge.svg)](https://github.com/hzxslzb/CinemaRadar/actions/workflows/ci.yml)
 [![Platforms](https://img.shields.io/badge/platforms-Android%20%7C%20macOS-333333)](https://github.com/hzxslzb/CinemaRadar/releases/latest)
 
-[下载安装](#下载安装) · [使用指南](docs/CinemaRadar-用户简介.md) · [更新记录](CHANGELOG.md) · [自行构建](docs/BUILDING.md) · [问题反馈](https://github.com/hzxslzb/CinemaRadar/issues)
+[下载安装](#下载安装) · [使用指南](docs/CinemaRadar-用户简介.md) · [完整技术文档](Doc/README.md) · [更新记录](CHANGELOG.md) · [自行构建](docs/BUILDING.md) · [问题反馈](https://github.com/hzxslzb/CinemaRadar/issues)
 
 ## 下载安装
 
@@ -78,6 +78,8 @@
 
 ## 开发
 
+顶层 [Doc/ 技术文档中心](Doc/README.md) 提供 16 个专题，覆盖产品边界、系统架构、源码导航、模型与存储、接口搜索、排片购票、订阅调度、通知展开、原生权限、UI 主题、性能可靠性、CI 发布、测试排障、扩展方案、隐私和 API 速查。文档按源码逐项核对，并明确区分当前实现与后续建议。
+
 项目使用 Flutter / Dart，固定的开发 SDK 为 OpenHarmony-SIG Flutter `3.41.10-ohos-1.0.0`，提交 `244a0e8abb3085e8675589b13e219af8c41cb7aa`。保留 HarmonyOS 适配插件的 Git 依赖，并通过 `pubspec.lock` 固定解析版本。
 
 ```bash
@@ -97,6 +99,7 @@ ohos/         保留的 HarmonyOS 平台源码
 test/         数据解析、订阅与界面回归测试
 tool/         发布构建、在线回归及本地签名处理脚本
 docs/         使用指南、截图、数据源研究及版本说明
+Doc/          架构、功能详解、实现、测试和维护技术手册
 ```
 
 完整源码随仓库上传；本地签名、凭据、SDK 路径、IDE 状态和编译缓存被排除，二进制安装包放在 Release 附件中。

@@ -2,6 +2,8 @@
 
 请先阅读 [README](README.md)、[构建说明](docs/BUILDING.md) 和 [数据源说明](docs/DATA_SOURCES.md)。
 
+完整架构和实现资料位于 [Doc/ 技术文档中心](Doc/README.md)。修改功能时同步维护对应专题、API/常量速查和必要的测试；尚未实现的方案应明确标记，不能直接写成已有能力。
+
 ## 问题反馈
 
 在 [Issues](https://github.com/hzxslzb/CinemaRadar/issues) 中提供应用版本、设备/系统版本、复现步骤、期望结果和实际结果。排片相关问题请附城市、影院名称、影片及发生时间；截图请先移除个人信息。

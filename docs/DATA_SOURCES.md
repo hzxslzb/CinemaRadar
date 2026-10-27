@@ -1,5 +1,7 @@
 # CinemaRadar 数据源研究与实现说明
 
+本页保留早期调研和实现概览。更完整且按当前源码核对的资料见 [Doc/ 技术文档中心](../Doc/README.md)，尤其是 [接口与搜索](../Doc/05-Data-Providers-and-Cinema-Search.md)、[订阅调度](../Doc/07-Subscriptions-and-Refresh.md) 和 [可靠性边界](../Doc/11-Performance-and-Reliability.md)。历史接口数量和实机记录不代表本次重新联网验证结果。
+
 一个端侧自治的影院排片订阅原型。Android、macOS 与 HarmonyOS 各自请求数据、保存订阅、比较场次和发送本地通知；没有自建后端，也不会依赖另一台设备在线。
 
 面向普通用户的简短介绍与真机界面图见 [CinemaRadar 用户简介](./CinemaRadar-用户简介.md)，下载和项目概览见 [README](../README.md)。
