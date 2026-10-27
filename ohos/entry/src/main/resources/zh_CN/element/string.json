@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "影院排片与新场次提醒"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "CinemaRadar 影院排片"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "CinemaRadar"
+    }
+  ]
+}

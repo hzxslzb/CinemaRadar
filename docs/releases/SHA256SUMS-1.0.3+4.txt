@@ -1,0 +1,3 @@
+7d41b078c1368c3bfd851db1cd754504e4c84e04ca2c7cf9e8aac184e9b44096  CinemaRadar-1.0.3+4.apk
+e6cc9d80e4cd010636e54b96d95ad8c9911c6179158d22dc8d2c8b3e176e4ff9  CinemaRadar-1.0.3+4.zip
+fb8f5a8faead360b24f356942e15b6fbc4e9129028f00ff332a09728c1bb11ee  CinemaRadar-1.0.3+4-android-macos.zip

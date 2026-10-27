@@ -1,0 +1,52 @@
+name: Build Android and macOS
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PUB_HOSTED_URL: https://pub.flutter-io.cn
+  FLUTTER_STORAGE_BASE_URL: https://storage.googleapis.com
+
+jobs:
+  build:
+    name: Build ${{ matrix.platform }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: android
+            os: ubuntu-latest
+          - platform: macos
+            os: macos-14
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup-flutter
+      - name: Set up Java
+        if: matrix.platform == 'android'
+        uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Resolve locked dependencies
+        run: flutter pub get --enforce-lockfile
+      - name: Build APK
+        if: matrix.platform == 'android'
+        run: flutter build apk --release --no-pub
+      - name: Build macOS ZIP
+        if: matrix.platform == 'macos'
+        run: ./tool/build_macos_release.sh
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: CinemaRadar-${{ matrix.platform }}
+          path: |
+            build/app/outputs/flutter-apk/CinemaRadar-*.apk
+            build/macos/CinemaRadar-*.zip
+          if-no-files-found: error

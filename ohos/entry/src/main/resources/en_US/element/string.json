@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Cinema schedules and new-session alerts"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "CinemaRadar cinema schedules"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "CinemaRadar"
+    }
+  ]
+}
