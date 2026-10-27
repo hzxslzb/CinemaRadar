@@ -17,12 +17,15 @@ cd CinemaRadar
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.googleapis.com
 flutter --version
+flutter config --no-enable-ohos
 flutter pub get --enforce-lockfile
 flutter analyze --no-pub
 flutter test --no-pub
 ```
 
 `pubspec.yaml` 中的三个 Git 插件用于保留 HarmonyOS 适配，同时提供 Android/macOS 实现。解析依赖需要访问 GitCode 和包镜像。保留 `pubspec.lock`；只有计划升级依赖时才重新生成锁文件。
+
+仅开发 Android/macOS 时，`flutter config --no-enable-ohos` 避免依赖解析额外要求鸿蒙 SDK；该设置只影响 Flutter 工具的平台处理。需要开发鸿蒙时重新运行 `flutter config --enable-ohos` 并配置 SDK。
 
 当前自动化测试覆盖场次响应解析、新场次检测、排序筛选、城市/行政区目录缓存、购票链接、订阅持久化、主题与刷新设置、顶部通知关闭/再次出现及周几/展开交互。
 

@@ -81,6 +81,7 @@
 项目使用 Flutter / Dart，固定的开发 SDK 为 OpenHarmony-SIG Flutter `3.41.10-ohos-1.0.0`，提交 `244a0e8abb3085e8675589b13e219af8c41cb7aa`。保留 HarmonyOS 适配插件的 Git 依赖，并通过 `pubspec.lock` 固定解析版本。
 
 ```bash
+flutter config --no-enable-ohos
 flutter pub get --enforce-lockfile
 flutter analyze --no-pub
 flutter test --no-pub

@@ -20,3 +20,4 @@ runs:
         test "$(git -C "$sdk_directory" rev-parse HEAD)" = "$FLUTTER_REVISION"
         printf '%s\n' "$sdk_directory/bin" >> "$GITHUB_PATH"
         "$sdk_directory/bin/flutter" --version
+        "$sdk_directory/bin/flutter" config --no-enable-ohos
