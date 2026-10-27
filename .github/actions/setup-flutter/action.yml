@@ -8,14 +8,15 @@ runs:
       env:
         FLUTTER_REPOSITORY: https://gitcode.com/openharmony-sig/flutter_flutter.git
         FLUTTER_REVISION: 244a0e8abb3085e8675589b13e219af8c41cb7aa
+        FLUTTER_TAG: 3.41.10-ohos-1.0.0
       run: |
         set -euo pipefail
         sdk_directory="${RUNNER_TEMP:?}/cinema-radar-flutter"
         test ! -e "$sdk_directory"
         git init "$sdk_directory"
         git -C "$sdk_directory" remote add origin "$FLUTTER_REPOSITORY"
-        git -C "$sdk_directory" fetch --depth=1 origin "$FLUTTER_REVISION"
-        git -C "$sdk_directory" checkout --detach FETCH_HEAD
+        git -C "$sdk_directory" fetch --depth=1 origin "refs/tags/$FLUTTER_TAG:refs/tags/$FLUTTER_TAG"
+        git -C "$sdk_directory" checkout --detach "$FLUTTER_REVISION"
         test "$(git -C "$sdk_directory" rev-parse HEAD)" = "$FLUTTER_REVISION"
         printf '%s\n' "$sdk_directory/bin" >> "$GITHUB_PATH"
         "$sdk_directory/bin/flutter" --version

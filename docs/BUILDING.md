@@ -10,8 +10,8 @@
 git clone https://github.com/hzxslzb/CinemaRadar.git
 git init cinema-radar-flutter
 git -C cinema-radar-flutter remote add origin https://gitcode.com/openharmony-sig/flutter_flutter.git
-git -C cinema-radar-flutter fetch --depth=1 origin 244a0e8abb3085e8675589b13e219af8c41cb7aa
-git -C cinema-radar-flutter checkout --detach FETCH_HEAD
+git -C cinema-radar-flutter fetch --depth=1 origin refs/tags/3.41.10-ohos-1.0.0:refs/tags/3.41.10-ohos-1.0.0
+git -C cinema-radar-flutter checkout --detach 244a0e8abb3085e8675589b13e219af8c41cb7aa
 export PATH="$PWD/cinema-radar-flutter/bin:$PATH"
 cd CinemaRadar
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
